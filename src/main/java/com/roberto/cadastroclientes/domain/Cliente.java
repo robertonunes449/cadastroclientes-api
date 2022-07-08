@@ -38,7 +38,6 @@ public class Cliente implements Serializable {
 
 	public Cliente() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Cliente(Integer id, String nome, String email, String nascimento, String profissao, String calcado,
