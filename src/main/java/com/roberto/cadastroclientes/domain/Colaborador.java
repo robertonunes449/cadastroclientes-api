@@ -1,10 +1,23 @@
 package com.roberto.cadastroclientes.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Colaborador {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+@Entity
+public class Colaborador implements Serializable {
+
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	private String email;
@@ -20,6 +33,7 @@ public class Colaborador {
 	private String celular;
 	private String uf;
 
+	@OneToMany(mappedBy = "colaborador")
 	private List<Cliente> clientes = new ArrayList<>();
 
 	public Colaborador() {
