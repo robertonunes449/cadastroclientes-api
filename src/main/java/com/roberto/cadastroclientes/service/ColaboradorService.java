@@ -50,4 +50,9 @@ public class ColaboradorService {
 		obj.setCelular(objDto.getCelular());
 		return repository.save(obj);
 	}
+
+	public void delete(Integer id) {
+		findById(id);
+		repository.deleteById(id);
+	}
 }
