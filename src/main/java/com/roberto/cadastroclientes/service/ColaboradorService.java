@@ -26,4 +26,9 @@ public class ColaboradorService {
 	public List<Colaborador> findAll() {
 		return repository.findAll();
 	}
+	
+	public Colaborador create(Colaborador obj) {
+		obj.setId(null);
+		return repository.save(obj);
+	}
 }
