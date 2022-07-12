@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.roberto.cadastroclientes.domain.Colaborador;
+import com.roberto.cadastroclientes.dtos.ColaboradorDTO;
 import com.roberto.cadastroclientes.repositories.ColaboradorRepository;
 import com.roberto.cadastroclientes.service.exceptions.ObjectNotFoundException;
 
@@ -29,6 +30,24 @@ public class ColaboradorService {
 	
 	public Colaborador create(Colaborador obj) {
 		obj.setId(null);
+		return repository.save(obj);
+	}
+
+	public Colaborador update(Integer id, ColaboradorDTO objDto) {
+		Colaborador obj = findById(id);
+		obj.setNome(objDto.getNome());
+		obj.setEmail(objDto.getEmail());
+		obj.setNascimento(objDto.getNascimento());
+		obj.setFuncao(objDto.getFuncao());
+		obj.setLogradouro(objDto.getLogradouro());
+		obj.setNumero(objDto.getNumero());
+		obj.setComplemento(objDto.getComplemento());
+		obj.setCep(objDto.getCep());
+		obj.setBairro(objDto.getBairro());
+		obj.setCidade(objDto.getCidade());
+		obj.setUf(objDto.getUf());
+		obj.setTelefone(objDto.getTelefone());
+		obj.setCelular(objDto.getCelular());
 		return repository.save(obj);
 	}
 }
