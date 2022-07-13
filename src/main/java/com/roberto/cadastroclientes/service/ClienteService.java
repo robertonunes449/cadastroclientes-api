@@ -30,4 +30,28 @@ public class ClienteService {
 		colaboradorService.findById(id_col);
 		return repository.findAllByColaborador(id_col);
 	}
+
+	public Cliente update(Integer id, Cliente obj) {
+		Cliente newObj = findById(id);
+		updateData(newObj, obj);
+		return repository.save(newObj);
+	}
+
+	private void updateData(Cliente newObj, Cliente obj) {
+		newObj.setNome(obj.getNome());
+		newObj.setEmail(obj.getEmail());
+		newObj.setNascimento(obj.getNascimento());
+		newObj.setProfissao(obj.getProfissao());
+		newObj.setCalcado(obj.getCalcado());
+		newObj.setLogradouro(obj.getLogradouro());
+		newObj.setNumero(obj.getNumero());
+		newObj.setComplemento(obj.getComplemento());
+		newObj.setCep(obj.getCep());
+		newObj.setBairro(obj.getBairro());
+		newObj.setCidade(obj.getCidade());
+		newObj.setUf(obj.getUf());
+		newObj.setTelefone(obj.getTelefone());
+		newObj.setCelular(obj.getCelular());
+		newObj.setContato(obj.getContato());
+	}
 }
