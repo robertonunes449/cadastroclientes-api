@@ -62,4 +62,9 @@ public class ClienteService {
 		obj.setColaborador(col);
 		return repository.save(obj);
 	}
+
+	public void delete(Integer id) {
+		Cliente obj = findById(id);
+		repository.delete(obj);
+	}
 }
