@@ -9,6 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.Length;
 
 @Entity
 public class Colaborador implements Serializable {
@@ -19,11 +22,15 @@ public class Colaborador implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@NotEmpty(message = "Campo NOME é requerido")
+	@Length(min = 3 , max = 150, message = "O campo NOME deve ter entre 3 a 150 caracteres")
 	private String nome;
+	
 	private String email;
-	private String nascimento;
-	private String funcao;
-	private String logradouro;
+	private String nascimento;	
+	private String funcao;	
+	private String logradouro;	
 	private String numero;
 	private String complemento;
 	private String cep;
