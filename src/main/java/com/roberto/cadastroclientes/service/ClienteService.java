@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.roberto.cadastroclientes.domain.Cliente;
+import com.roberto.cadastroclientes.domain.Colaborador;
 import com.roberto.cadastroclientes.repositories.ClienteRepository;
 import com.roberto.cadastroclientes.service.exceptions.ObjectNotFoundException;
 
@@ -53,5 +54,12 @@ public class ClienteService {
 		newObj.setTelefone(obj.getTelefone());
 		newObj.setCelular(obj.getCelular());
 		newObj.setContato(obj.getContato());
+	}
+
+	public Cliente create(Integer id_col, Cliente obj) {
+		obj.setId(null);
+		Colaborador col = colaboradorService.findById(id_col);
+		obj.setColaborador(col);
+		return repository.save(obj);
 	}
 }
