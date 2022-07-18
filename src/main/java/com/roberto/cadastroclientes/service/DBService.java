@@ -21,16 +21,16 @@ public class DBService {
 
 	public void instanciaBaseDeDAdos() {
 		
-		Colaborador col1 = new Colaborador(null, "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João");
-		Colaborador col2 = new Colaborador(null, "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João");
-		Colaborador col3 = new Colaborador(null, "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "João");
+		Colaborador col1 = new Colaborador(null, "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "00000000", "000000000", "João");
+		Colaborador col2 = new Colaborador(null, "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "00000000", "000000000", "João");
+		Colaborador col3 = new Colaborador(null, "João", "João", "João", "João", "João", "João", "João", "João", "João", "João", "00000000", "000000000", "João");
 		
 		
-		Cliente c1 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", col1);
-		Cliente c2 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", col2);
-		Cliente c3 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", col2);
-		Cliente c4 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", col2);
-		Cliente c5 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", col3);
+		Cliente c1 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "00000000", "000000000", "000000000", "Jose", col1);
+		Cliente c2 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "00000000", "000000000", "000000000", "Jose", col2);
+		Cliente c3 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "00000000", "000000000", "000000000", "Jose", col2);
+		Cliente c4 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "00000000", "000000000", "000000000", "Jose", col2);
+		Cliente c5 = new Cliente(null, "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "Jose", "00000000", "000000000", "000000000", "Jose", col3);
 		
 		col1.getClientes().addAll(Arrays.asList(c1));
 		col2.getClientes().addAll(Arrays.asList(c2, c3, c4));
