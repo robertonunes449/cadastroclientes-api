@@ -35,7 +35,7 @@ public class DBService {
 		col1.getClientes().addAll(Arrays.asList(c1));
 		col2.getClientes().addAll(Arrays.asList(c2, c3, c4));
 		col3.getClientes().addAll(Arrays.asList(c5));
-		
+		 
 		this.colaboradorRepository.saveAll(Arrays.asList(col1, col2, col3));
 		this.clienteRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5));
 	}
